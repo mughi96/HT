@@ -1,0 +1,43 @@
+Hash Table Guide:
+
+
+- This webpage contains a simple visualisation to demonstrate the working principles of a Hash Table. 
+
+- The hash table is an array of length 17, with each index containing a pointer to a secondary 
+  array of length 3 to store colliding data. 
+
+- This panel on the right will serve as a guide on navigating this visualisation tool. 
+
+
+
+Below the hash table, the hash function used is displayed, where: 
+	c = character code
+	a = large prime number (7919)
+	k = length of string
+
+
+
+1. INSERT: Type a string (max 10 characters) into the input field and press ‘INSERT’. 
+
+
+	- Once “INSERT” has been pressed, look below the Hash Function equation to watch the hashing
+	- After the hash value has been calculated, the string will appear in the table, before moving into their 
+	  respective arrays	
+	- If collisions occur, the string will be stored in the next index of the secondary array
+	- Repeat this step to populate the table with more strings. 
+
+
+2. DELETE: To remove a string from the table, type the string into input field and press “DELETE”.
+
+
+3. FIND: To locate a string within the table, type the string into the input field and press “FIND”. 
+
+
+
+
+
+
+
+
+
+
