@@ -12,7 +12,7 @@ const findButton = document.getElementById('to-find-btn');
 
 let hashTable;
 
-let sizeX = 70;
+let sizeX = w / 22;
 let sizeY = 30;
 let rectGroupSizeX = sizeX * 2;
 
@@ -138,7 +138,8 @@ function draw() {
 
   //borders
   strokeWeight(1);
-  line(w - w / 2.5, 0, w - w / 2.5, h);
+  // line(w - w / 2.5, 0, w - w / 2.5, h);
+  line(w/2 + sizeX * 2, 0, w/2 + sizeX * 2, h); 
 
   // hash table
   drawHashArr();
