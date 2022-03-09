@@ -116,8 +116,8 @@ function draw() {
 
 
   //borders
-  strokeWeight(1);
-  line(w - w / 2.5, 0, w - w / 2.5, h);
+  //strokeWeight(1);
+  //line(w - w / 2.5, 0, w - w / 2.5, h);
 
   // hash table
   drawHashArr();
