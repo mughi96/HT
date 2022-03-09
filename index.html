@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="en"><head>
+    <script src="p5.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <title>Algorithm Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet">
+  </head>
+ <body>
+      <header>
+      <div class="head">
+        <div class="wrapper">
+          <h1 class="title">HASH TABLE</h1>
+        </div>
+      </div>
+      <nav class="operations">
+        <div class="wrapper">
+          <div class="fields">
+            <div class="input-container">
+              <input type="text" name="num" id="to-insert" placeholder="Enter a string" maxlength="10">
+              <button class="act-btn" id="to-insert-btn">INSERT</button>
+            </div>
+            <div class="input-container">
+              <input type="text" name="num" id="to-delete" placeholder="Enter a string" maxlength="10">
+              <button type="submit" class="act-btn" id="to-delete-btn">DELETE</button>
+            </div>
+            <div class="input-container">
+              <input type="text" name="num" id="to-find" placeholder="Enter a string" maxlength="10">
+              <button type="submit" class="act-btn" id="to-find-btn">SEARCH</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="shadow1" style="float: right;">
+      <div style="background-color: #c4d4cf; display: block; padding: 15px 0; text-align: center; width: 675px;">
+        <a style="color: #334741; margin: 0 2em; text-decoration: none;" href="#firstly">Introduction</a> 
+        <a style="color: #334741; margin: 0 2em; text-decoration: none;" href="#second">Insert</a> 
+        <a style="color: #334741; margin: 0 2em; text-decoration: none;" href="#third">Delete</a>
+        <a style="color: #334741; margin: 0 2em; text-decoration: none;" href="#fourth">Find</a>
+      </div>
+      <div class="smooth" style="background-color: #eaeaea; display: block; height: 700px; overflow-y: scroll; text-align: center; width: 675px;">
+        <div id="firstly" style="background-color: #e5f1e4; display: flex; flex-direction: column; text-align: left; justify-content: start; width: 100%; height: 1400px; padding-left: 15px; padding-right: 15px; padding-top: 10px; padding-bottom: 15px; font-size: 19px">
+          <h2>Hash Table</h2>
+          <p>The idea behind a Hash Table is that for each element we want to store, we calculate a unique address and we put the value at this index in the array. When we need to find a value, we once again calculate its index and then return the value. In other words, a Hash Table allows us to store and retrieve objects by key.</p> 
+          <br>
+          <p>In this visualisation, there is a Hash Table of length 17. Each index of the Hash Table contains a pointer to a secondary array of length 3. The purpose of the secondary array is to store collisions (when multiple strings have the same hash value).</p>
+          <br>
+          <h2>Hash Function</h2>
+          <p>A hash function generates new values according to a mathematical hashing algorithm, known as a hash value or simply a hash. In this visualisation, the hash function used is a Polynomial Rolling Hash Function adopted from the Rabin-Karp algorithm. It is displayed below the hash table. 
+          <br>
+          <br>
+          Simply put, the Hash Function takes in a string as input and gives an index of the Hash Table as the output. The string is then stored in the corresponding array of that index. 
+          <br>
+          <br>
+          <p>In the Hash Equation used in this Hash Table,</p>
+          <ul>
+            <li>a = 7919 (a random large prime number)</li>
+            <li>c = character code</li>
+            <li>k = string length</li>
+          </ul>
+          <br>
+          <h2>How To Use This Tool</h2>
+          <p>This tool is meant to demonstrate the basic working principles of a Hash Table. The Hash Table is displayed on the left, with the Hash Function equation displayed below it. The animation displaying the steps taken by the Hash Function will be displayed below the Hash Function equation after a string has been input.</p>
+          <br>
+          There are 3 main operations featured in this tool: 
+          <ol>
+            <li>Insert</li>
+            <br>
+            <li>Delete</li>
+            <br>
+            <li>Search/Find</li>
+          </ol>
+          <br>
+          <p>Scroll down along this box for instructions on how to execute the operations.</p>
+        </div>
+        <div id="second" style="background-color: #e5dce0; display: flex; flex-direction: column; text-align: left; justify-content: start; width: 100%; height: 1035px; padding-left: 15px; padding-right: 15px; padding-top: 10px; padding-bottom: 15px; font-size: 19px">
+          <h2>Insert a String</h2>
+          <p>To insert a string into the Hash Table:</p>
+          <br>
+          <ol>
+            <li>In the 'INSERT' input box, enter a string of maximum 10 characters</li><br>
+            <li>Press 'Insert'</li><br>
+            <li>The individual steps taken by the hashing algorithm will be displayed under the Hash Function equation below the Hash Table</li><br>
+            <li>Once the hashing is done, the string will be appear in an index of the Hash Table corresponding to its hash value</li><br>
+            <li>If the string is hashed to an index that already contains a string, it will be stored at the next available slot of that index, up to a maximum of 3 strings</LI><br>
+            <li>The Insert operation is complete</li>
+          </ol>
+          <br>
+          <p>Some examples of strings that can be used are:</p>
+          <ul>
+            <li>"hello"</li>
+            <li>"morning"</li>
+            <li>"TORTOISE"</li>
+          </ul>
+
+          <p>Some examples of colliding strings are:</p>
+          <ul>
+            <li>"new" & "purple" & "jacket"</li>
+            <li>"chicken" & "fish"</li>
+            <li>"beef" & "gold"</li>
+          </ul>
+          <br>
+          <p>The string can include uppercase, lowercase, integers and special characters.</p>
+        </div>
+        <div id="third" style="background-color: #d9f0fc; display: flex; flex-direction: column; text-align: left; justify-content: start; width: 100%; height: 530px; padding-left: 15px; padding-right: 15px; padding-top: 10px; padding-bottom: 15px; font-size: 19px">
+          <h2>Delete a String</h2> 
+          <p>To delete a string from the Hash Table:</p><br>
+          <ol>
+            <li>In the 'DELETE' input box, enter a string that is already in the Hash Table</li><br>
+            <li>Press 'Delete'</li><br>
+            <li>The string goes through the same process as the Insert operation, but the hashing is not displayed as it happens in the background</li><br>
+            <li>The corresponding string in the Hash Table is then removed</li><br>
+            <li>The Delete operation is complete</li>
+          </ol>
+        </div>
+        <div id="fourth" style="background-color: #f4fccf; display: flex; flex-direction: column; text-align: left; justify-content: start; width: 100%; height: 500px; padding-left: 15px; padding-right: 15px; padding-top: 10px; padding-bottom: 15px; font-size: 19px">
+        <h2>Find a String</h2>
+        <p>To search for a string in the Hash Table:</p><br>
+        <ol>
+          <li>In the 'SEARCH' input box, enter a string</li><br>
+          <li>Press 'Find'</li><br>
+          <li>The string goes through the hash function in the background and if the same string is found in the Hash Table, the corresponding index will be highlighted in red</li><br>
+          <li>If no such string exists, nothing will happen</li><br>
+          <li>The Search/Find operation is complete</li>
+        </ol>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="container"></div>
+    <script src="sketch.js"></script>
+    <script src="HashTable.js"></script>
+  
+    <script>
+      $( "a" ).click(function( event ) {
+        event.preventDefault();
+        $( "<div>" )
+          .append( "default " + event.type + " prevented" )
+          .appendTo( "#log" );
+      });
+      </script>
+
+
+
+</body></html>
