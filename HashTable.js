@@ -33,7 +33,7 @@ class HashTable {
         let index = this.hash(key);
 
         if (!this.buckets[index]) {
-            window.alert("String does not exist!")
+            return "String does not exist!"
         }
         for (let bucket of this.buckets[index]) {
             if (bucket === key) {
