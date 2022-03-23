@@ -41,14 +41,14 @@
         <a style="color: #334741; margin: 0 2em; text-decoration: none;" href="#fourth">Find</a>
       </div>
       <div class="smooth" style="background-color: #eaeaea; display: block; height: 700px; overflow-y: scroll; text-align: center; width: 675px;">
-        <div id="firstly" style="background-color: #e5f1e4; display: flex; flex-direction: column; text-align: left; justify-content: start; width: 100%; height: 1400px; padding-left: 15px; padding-right: 15px; padding-top: 10px; padding-bottom: 15px; font-size: 19px">
+        <div id="firstly" style="background-color: #e5f1e4; display: flex; flex-direction: column; text-align: left; justify-content: start; width: 100%; height: 1450px; padding-left: 15px; padding-right: 15px; padding-top: 10px; padding-bottom: 15px; font-size: 19px">
           <h2>Hash Table</h2>
           <p>The idea behind a Hash Table is that for each element we want to store, we calculate a unique address and we put the value at this index in the array. When we need to find a value, we once again calculate its index and then return the value. In other words, a Hash Table allows us to store and retrieve objects by key.</p> 
           <br>
           <p>In this visualisation, there is a Hash Table of length 17. Each index of the Hash Table contains a pointer to a secondary array of length 3. The purpose of the secondary array is to store collisions (when multiple strings have the same hash value).</p>
           <br>
           <h2>Hash Function</h2>
-          <p>A hash function generates new values according to a mathematical hashing algorithm, known as a hash value or simply a hash. In this visualisation, the hash function used is a Polynomial Rolling Hash Function adopted from the Rabin-Karp algorithm. It is displayed below the hash table. In reality, there are many different types of Hash Functions.
+          <p>A hash function generates new values according to a mathematical hashing algorithm, known as a hash value or simply a hash. In this visualisation, the hash function used is a Polynomial Rolling Hash Function adopted from the Rabin-Karp algorithm. The Hash Function computes hash values based on the ASCII values of characters in the string input. It is displayed below the hash table. In reality, there are many different types of Hash Functions.
           <br>
           <br>
           Simply put, the Hash Function takes in a string as input and gives an index of the Hash Table as the output. The string is then stored in the corresponding array of that index. 
