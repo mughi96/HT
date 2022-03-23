@@ -77,7 +77,7 @@ function draw() {
         if(millis() - animationStart > 1000 * i){
           var overNumber = (animationString.length - i - 1)
           var subStr = animationString.substring(i, i + 1)
-          text("charCode(" + subStr + ") x 7919 ^ " + overNumber, w / 3.5, 900 + i * 60);
+          text("ASCII(" + subStr + ") x 7919 ^ " + overNumber, w / 3.5, 900 + i * 60);
           if( i < animationString.length - 1){
              text("\n + ",w / 3.5, (900 + i * 60) + 5)
           }
